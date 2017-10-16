@@ -1,17 +1,5 @@
 describe("Iteration", function() {
 
-	function Iteration() {
-		points: 0;
-
-		addPoints: function(number) {
-			points = points + number;
-		};
-
-		totalPoints: function() {
-			return points;
-		};
-	};
-
   it("should return the correct number of points", function() {
     var iteration = new Iteration();
     iteration.addPoints(1);
