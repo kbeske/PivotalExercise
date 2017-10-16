@@ -1,5 +1,28 @@
 describe("Project", function() {
 
+  function Project(){
+    iterations [];
+    addIteration: function(Iteration) {
+      iterations.appendChild(Iteration);
+    };
+    velocity: function() {
+      var totalPoints = 0;
+      if (iterations.length < 3) {
+        for (var i = 0; i < iterations.length; i++) {
+          totalPoints += iterations[i];
+        };
+        return totalPoints / iterations.length;
+      };
+      else {
+        totalPoints += iterations[iterations.length - 1];
+        totalPoints += iterations[iterations.length - 2];
+        totalPoints += iterations[iterations.length - 3];
+        return totalPoints / 3;
+      };
+    };
+
+  };
+
   var project, iteration1, iteration2, iteration3;
 
   beforeEach(function() {
