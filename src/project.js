@@ -14,14 +14,14 @@ Project.prototype.velocity = function() {
 	  }
       else if (size < 3) {
         for (var i = 0; i < size; i++) {
-          totalPoints += this.iterations[i].totalPoints;
+          totalPoints += this.iterations[i].totalPoints();
         }
         return totalPoints / size;
       }
       else {
-        totalPoints += this.iterations[size - 1].totalPoints;
-        totalPoints += this.iterations[size - 2].totalPoints;
-        totalPoints += this.iterations[size - 3].totalPoints;
+        totalPoints += (this.iterations[size - 1]).totalPoints();
+        totalPoints += (this.iterations[size - 2]).totalPoints();
+        totalPoints += (this.iterations[size - 3]).totalPoints();
       }
       return totalPoints / 3;
 };
